@@ -1,0 +1,86 @@
+body {
+	padding: 0px 450px;
+}
+
+hr {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.page-name {
+	text-align: center;
+	margin-top: 5px;
+    font-size: -webkit-xxx-large;
+}
+
+.restaurant-link {
+	color: black !important;
+}
+
+
+.pic > img {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.pic {
+	color: black !important;
+	height: 150px;
+	border: 1px solid #eee;
+	padding-top: 60px;
+}
+
+
+.restaurant-name {
+	color: #ffbc42;
+	font-size: xx-large;
+	font-weight: 700;
+}
+.restaurant-name:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+
+.restaurant-addr > span {
+	margin-top: 15px;
+}
+
+.restaurant-phone > span {
+	margin-top: 15px;
+}
+
+.restaurant-review > span {
+	margin-top: 15px;
+}
+
+
+.link-back {
+	margin-top: 15px;
+}
+.link-back > a {
+    color: #757575 !important;
+    font-size: xx-large;
+}
+.link-back > a:hover {
+	color: black !important;
+	text-decoration: none;
+}
+
+
+.restaurant-detail-name {
+	margin-top: 5px;
+    font-size: -webkit-xxx-large;
+}
+
+.restaurant-detail-description {
+	padding-top: 10px;
+	min-height: 200px;
+}
+
+.restaurant-detail-review {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-height: 150px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Restaurant Finder - Detail</title>
+	 <meta charset="utf-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	 <link href="../static/css/site.css" th:href="@{/css/site.css}" rel="stylesheet" />
+	 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12 link-back">
+			<a th:href="@{'/'}">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+				Back
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-9 col-md-offset-3 restaurant-detail-name">
+			<span th:text="${restaurantDetail.name}"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			<span class="glyphicon glyphicon-map-marker"></span>
+			<span th:text="${restaurantDetail.address}"></span>
+		</div>
+		<div class="col-md-3">
+			<span class="glyphicon glyphicon-earphone"></span>
+			<span th:text="${restaurantDetail.phone}"></span>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-12 pic text-center">
+			<img src="../../static/images/food_icon.png" th:src="@{../images/food_icon.png}" alt="Food image">
+		</div>
+	</div>
+	<div class="row restaurant-detail-description">
+		<div class="col-md-12">
+			<span th:text="${restaurantDetail.description}"></span>
+		</div>
+	</div>
+	<h2>Reviews (<span th:text="${restaurantDetail.reviewCount}"></span>)</h2>
+	<hr/>
+	<div th:each="review : ${restaurantDetail.reviews}">
+		<div class="row restaurant-detail-review">
+			<div class="col-md-12">
+				<span th:text="${review}"></span>
+			</div>
+		</div>
+		<hr/>
+	</div>
+</body>
+</html>
